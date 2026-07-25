@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background: #f1f3f6;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+
+/* HEADER */
+header {
+    min-height: 220px;
+    color: white;
+    padding: 25px;
+    text-align: center;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("https://scu.eg/storage/2023/04/%D8%B5%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* شريط الأخبار */
+.new-bar {
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #0002;
+    margin: 15px 0;
+}
+
+.new-bar span {
+    display: inline-block;
+    padding: 14px 30px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+
+    animation: scrollnews 45s linear infinite;
+}
+
+.new-bar:hover span {
+    animation-play-state: paused;
+}
+
+
+@keyframes scrollnews {
+
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+
+}
+
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+nav a {
+
+    color: #333;
+    text-decoration: none;
+
+    padding: 12px 25px;
+
+    border-radius: 15px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+    position: relative;
+}
+
+
+nav a:hover {
+
+    background: #2e7dff;
+
+    color:white;
+
+    transform: translateY(-4px);
+
+}
+
+
+/* المحتوى */
+.container {
+
+    width: 90%;
+
+    max-width:1200px;
+
+    margin:30px auto;
+
+    padding:30px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px #0002;
+
+}
+
+
+/* الكروت */
+.cards {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+.card {
+
+    background:#fafafa;
+    color: #2e7effb7;
+    padding:25px;
+ 
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:1px solid #00000085;
+
+}
+
+
+.card:hover {
+
+    transform:translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(46, 125, 255, .35);
+
+    background: linear-gradient(135deg, #2e7eff56, #5a8eff57);
+
+    color:#fcf7f7;
+
+}
+
+.card:hover::after {
+
+    background: #fff;
+
+    width: 140px;
+
+}
+
+/* FOOTER */
+
+footer {
+
+    margin-top:40px;
+
+    padding:25px;
+
+    background:#303846;
+
+    color:white;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+footer:hover {
+
+    background:#2e7dff;
+
+}
+
+
+footer h3 {
+
+    margin:5px;
+
+    font-size:24px;
+
+}
+
+
+
+/* الموبايل */
+
+@media(max-width:600px){
+
+    header {
+
+        min-height:170px;
+
+    }
+
+
+    nav a {
+
+        width:90%;
+
+    }
+
+
+    .container {
+
+        width:95%;
+
+        padding:15px;
+
+    }
+
+
+    .new-bar span {
+
+        font-size:15px;
+
+    }
+
+}
+
+.container .title {
+    display: block;
+    position: relative;
+
+    width: calc(100% + 40px);
+    margin: 0 -20px 30px;
+
+    text-align: center;
+    padding: 16px 30px;
+
+    font-family: "Cairo", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+
+    color: #2e7eff56;
+
+    background: linear-gradient(135deg, #ffffff, #f3f7ff);
+    border-radius: 14px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+/* الخط السفلي */
+.container .title::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60px;
+    height: 4px;
+
+    background: #2e7eff69;
+    border-radius: 50px;
+
+    transition: .35s ease;
+}
+
+/* Hover */
+.container .title:hover {
+    width: calc(100% + 60px);
+    margin: 0 -30px 30px;
+
+    background: linear-gradient(135deg, #2e7eff56, #5a8eff57);
+    color: #fff;
+
+    box-shadow: 0 12px 30px rgba(46, 125, 255, .35);
+}
+
+.container .title:hover::after {
+    width: 140px;
+    background: #fff;
+}
