@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مكتبة الثانوية العامة</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Tahoma", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #f4f9ff, #dceeff);
+      color: #123;
+      line-height: 1.8;
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, #0b4ea2, #1f74d0);
+      color: white;
+      padding: 14px 24px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 76, 166, 0.95);
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      padding: 14px;
+      flex-wrap: wrap;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #0a4c9c;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #335;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 30px));
+      margin: 20px auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(18, 64, 124, 0.12);
+      border-top: 5px solid #1e73d8;
+    }
+
+    .card h3 {
+      color: #0a4c9c;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 14px;
+      background: #0c5fc2;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #0a4c9c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      background: #0a4c9c;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="topbar">مكتبة الثانوية العامة | البوابة الإلكترونية</div>
+
+  <nav class="navbar">
+    <a href="#about">عن المكتبة</a>
+    <a href="#library">المكتبة</a>
+    <a href="#services">الخدمات</a>
+    <a href="#contact">تواصل</a>
+  </nav>
+
+  <section class="hero">
+    <h1>مكتبة الثانوية العامة ترحب بكم</h1>
+    <p>منصة عربية حديثة تقدم خدمات للمكتبة والطلاب، مع سهولة الوصول إلى الموارد والبرامج والطلبات الإلكترونية.</p>
+  </section>
+
+  <div class="container">
+    <section id="about" class="card">
+      <h3>عن المكتبة</h3>
+      <p>تسعى المكتبة إلى دعم الطلبة والباحثين من خلال توفير مصادر تعليمية متنوعة، بيئة مشجعة للقراءة، وخدمات إلكترونية سهلة وسريعة.</p>
+    </section>
+
+    <div class="cards">
+      <section id="library" class="card">
+        <h3>المكتبة</h3>
+        <p>الوصول إلى الكتب، المراجع، والمواد التعليمية داخل المدرسة عبر منصة مريحة.</p>
+        <a href="#contact" class="btn">اطلب كتابًا</a>
+      </section>
+
+      <section id="services" class="card">
+        <h3>الخدمات</h3>
+        <p>خدمات إلكترونية مثل حجز الكتب، الاستفسارات، والأنشطة التعليمية والبحثية.</p>
+        <a href="#contact" class="btn">تصفح الخدمات</a>
+      </section>
+
+      <section id="contact" class="card">
+        <h3>التواصل</h3>
+        <p>يمكنك التواصل مع فريق المكتبة للاستفسار عن الخدمات والموارد المتاحة.</p>
+        <a href="mailto:library@school.edu.sa" class="btn">راسل المكتبة</a>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    جميع الحقوق محفوظة © مكتبة الثانوية العامة
+  </footer>
+</body>
+
+
+
+
+
+
+</html>
