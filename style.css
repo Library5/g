@@ -199,7 +199,7 @@ footer {
 
 footer:hover {
 
-    background: linear-gradient(135deg, #2e7eff56, #5a8eff57);
+    background: linear-gradient(135deg, #2e7effc5, #5a8eff57);
     box-shadow: 0 12px 30px rgba(46, 125, 255, .35);
 }
 
