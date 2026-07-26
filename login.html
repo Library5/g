@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>مكتبة الثانويه العامه</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>مكتبة الثانويه العامه</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="summaries.html">الملخصات</a>
+        <a href="services.html">الخدمات</a>
+    </nav>
+
+    <h1 style="text-align: center; margin-top: 50px;">مرحبا بكم في مكتبة الثانوية العامة</h1>
+    <p style="text-align: center; margin-top: 10px;">يمكنك إنشاء حساب جديد أو تسجيل الدخول لحفظ بياناتك بشكل آمن داخل المتصفح.</p>
+
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid #ccc;">
+
+    <div class="login-platform">
+        <h2>تسجيل الدخول</h2>
+        <form id="loginForm">
+            <label for="username">اسم المستخدم:</label>
+            <input type="text" id="username" name="username" required autocomplete="username">
+            <label for="password">كلمة المرور:</label>
+            <input type="password" id="password" name="password" required autocomplete="current-password">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                <button type="submit" value="login" style="flex: 1; padding: 12px; border: none; border-radius: 10px; background: #2e7eff; color: white; cursor: pointer;">تسجيل الدخول</button>
+                <button type="submit" value="signup" style="flex: 1; padding: 12px; border: none; border-radius: 10px; background: #1b5e20; color: white; cursor: pointer;">إنشاء حساب</button>
+            </div>
+        </form>
+        <p id="loginMessage" style="color: red; text-align: center; margin-top: 10px;"></p>
+    </div>
+
+    <footer>
+        <h3>مكتبة الثانوية العامة</h3>
+        <p>جميع الحقوق محفوظة &copy; 2026 مكتبة الثانوية العامة</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
