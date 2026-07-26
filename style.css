@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+/* منع أي تأثيرات حركة عامة تسبب تهنيج أو تداخل */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background: #f1f3f6;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    min-height: 220px;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("https://scu.eg/storage/2023/04/%D8%B5%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+header p.lead {
+    margin: 8px 0 0;
+    font-size: 16px;
+    opacity: .9;
+}
+
+/* شريط الأخبار */
+.new-bar {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 15px 0;
+    color: whitesmoke;
+}
+
+.new-bar span {
+    display: inline-block;
+    padding: 14px 30px;
+    color: #f8f8f8;
+    font-size: 18px;
+    font-weight: 700;
+    animation: scrollnews 45s linear infinite;
+}
+
+
+
+@keyframes scrollnews {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+
+/* NAV - تم تثبيت الأبعاد والمقاسات لمنع الحركة */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 15px;
+   
+    border-radius: 15px;
+
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: bold;
+    background: #ffffff00;
+    border: 3px solid rgba(255, 253, 253, 0.459);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #2e7eff, #5a8eff);
+    color: white;
+    box-shadow: 0 6px 15px rgba(46, 125, 255, 0.25);
+}
+
+/* المحتوى الرئيسي */
+.main-wrapper {
+    flex: 1; /* يضمن دفع الفوتر للأسفل دائماً وعدم تعليقه */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* العناوين الداخلية بدون تمدد مزعج يغير حجم الصفحة */
+.container .title {
+    position: relative;
+    width: 100%;
+    margin: 0 0 30px 0;
+    text-align: center;
+    padding: 16px 30px;
+    font-size: 32px;
+    font-weight: 800;
+    color: #2e7eff;
+    background: linear-gradient(135deg, #ffffff, #f3f7ff);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .05);
+}
+
+.container .title::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #2e7eff69;
+    border-radius: 50px;
+    transition: width 0.3s ease;
+}
+
+.container .title:hover::after {
+    width: 100px;
+}
+
+/* الكروت */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fafafa;
+    color: #2e7eff;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(46, 125, 255, 0.2);
+    background: linear-gradient(135deg, #2e7eff, #5a8eff);
+    color: #fff;
+}
+
+.card .meta { font-size: 13px; color: #6b7aa6; margin-bottom: 10px; }
+.card h3 { margin: 6px 0 12px; font-size: 20px; }
+.card p { color: #16325a; opacity: .9; }
+.card:hover p, .card:hover .meta { color: #fff; }
+
+/* منصة تسجيل الدخول بحجم ثابت ومستقر */
+.login-platform {
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.login-platform h1 {
+    color: #2e7eff;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-platform label {
+    font-weight: 700;
+    color: #02213f;
+    margin-bottom: 6px;
+}
+
+#username, #password {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 15px;
+    text-align: center;
+    background: #fff;
+    outline: none;
+}
+
+#username:focus, #password:focus {
+    border-color: #2e7eff;
+    box-shadow: 0 0 0 3px rgba(46, 125, 255, 0.15);
+}
+
+#username::placeholder, #password::placeholder {
+    color: #87a4fc;
+    opacity: 1;
+}
+
+.login-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#signupButton, #loginButton {
+    background: #f3f7ff;
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    flex: 1;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s;
+}
+
+#signupButton:hover, #loginButton:hover {
+    background: #2e7eff;
+    color: #fff;
+}
+
+/* الأزرار العامة */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg,#2e7eff,#5a8eff);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(46, 125, 255, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* FOOTER - تم إزالة الـ fixed لضمان عدم تعليقه فوق المحتوى واستقراره بالأسفل */
+footer {
+    margin-top: auto;
+    padding: 30px 20px;
+    background: #4a6fa5;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+footer .cols {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .cols div {
+    flex: 1;
+    min-width: 180px;
+}
+
+footer h3 {
+    margin: 5px 0 15px 0;
+    font-size: 20px;
+}
+
+/* التجاوب */
+@media(max-width: 600px) {
+    header { min-height: 170px; }
+    nav a { width: 100%; text-align: center; }
+    .container { width: 95%; padding: 15px; }
+    .login-platform { width: 90%; padding: 20px; }
+}
